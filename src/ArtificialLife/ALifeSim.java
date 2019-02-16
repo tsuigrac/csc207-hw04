@@ -25,6 +25,7 @@ public class ALifeSim {
       Pair<String, Integer> current = pop.getPopulationCounts()[i];
       pen.println(current.getLeft() + " = " + current.getRight());
     }
+    pen.println("Mean Cooperation Probability" + " = " + pop.calculateCooperationMean());
     
   }
 
