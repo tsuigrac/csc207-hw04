@@ -2,15 +2,25 @@ package ArtificialLife;
 
 public class Organism {
 
-  // fields
+  
+  // +--------+-------------------------------------------------------
+  // | Fields |
+  // +--------+
+
   private int energy;
 
-  // constructor
+  // +--------------+-------------------------------------------------
+  // | Constructors |
+  // +--------------+
+
   public Organism() {
     this.energy = 0;
   }
 
-  // methods
+  // +---------+------------------------------------------------------
+  // | Methods |
+  // +---------+
+  
   public void update() {
     this.energy++;
   }

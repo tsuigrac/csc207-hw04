@@ -159,7 +159,7 @@ Results:
 9. Mean Cooperation Probability = 0.035353535353
 10. Mean Cooperation Probability = 0.040404040404
 
-Average: 0.21
+Average: 0.02
 
 These results support our prediction because the probabilities were very
 low since Defectors dominated the final population.
@@ -173,3 +173,59 @@ Defectors exist, even if there is only 1 of them compared to 99 others,
 there is still a chance that Defectors will wipe out the others. To let
 Cooperators succeed in this simulation, the Cooperators had to have a much
 higher population compared to the defectors. 
+
+
+
+Bonus:
+
+Add mutation:
+We predict that since the Cooperators and Partial-Cooperators can no longer
+be totally wiped out, since there's always a possibility of Defectors
+producing one of them when they reproduce, the mean cooperation probability
+will be greater than what it was without mutations.
+We performed tests on our updated code with 33 of each type of organism in
+100 iterations, and we found that the Mean Cooperation Probability is
+greater than without the possibility of mutations. More specifically, the
+Mean is never 0, but can go up to 0.45 and averages around 0.2.
+
+
+Change costs/benefits of cooperating
+1. We updated the code so that whenever an organism cooperates, all its energy
+is taken away and 8 random organisms gain one energy. We predict that since
+Cooperators cooperate every time, they will always have 0 energy and never
+get to reproduce. Therefore, they will probably get replaced when the
+Partial Cooperators and Defectors reproduce, and so the Mean Cooperation
+Probability will be very low. However, the Cooperators will never totally
+get wiped out because of the mutation.
+We found that our predictions were correct, with a Mean Cooperation
+Probability of less than 10% each time we ran our code. Defectors always
+greatly outnumbered the Partial Cooperators and Cooperators.
+
+
+2. We changed the settings again and made it so that whenever an organism
+cooperators, it gives out between 6 to 8 energy units to random
+organisms. The amount of energy it gives is random, and it also only loses
+one energy every time it cooperates. We predict that the Mean Cooperation
+Probability increases because Cooperators would help the Defectors less
+since they are giving them less energy, and so the Defectors would have
+less of an advantage over Cooperators when it comes time to reproduce.
+We found that there weren't any obvious changes to the Mean Cooperation
+Probability, so our prediction was incorrect. This may be because when a
+Cooperator gives out energy, it also may give energy to other
+Cooperators. Therefore, when it gives less energy, although it helps the
+Defectors and Partial Cooperators less, it also helps other Cooperators
+less, and in the end Defectors and Partial Cooperators still have
+reproductive advantages because they lose less energy.
+
+
+Selective Replacement:
+We predict that the Defectors will now outnumber the Cooperators and
+PartialCooperators since they keep getting energy from the other organisms
+and do not give up any energy.
+Our prediction was incorrect, and it turns out that PartialCooperators
+greatly dominate the Cooperators and Defectors. This is because when
+Cooperators give out energy, they are at an increased likelihood to be
+replaced. Because the Defectors always accept energy so often, they
+reproduce the most often. However, this reproduction sets their energy to
+0, so they get replaced by their offspring, which also has 0 energy
+and is likely to be replaced.
