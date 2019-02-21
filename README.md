@@ -189,7 +189,7 @@ greater than without the possibility of mutations. More specifically, the
 Mean is never 0, but can go up to 0.45 and averages around 0.2.
 
 
-Change costs/benefits of cooperating
+Change costs/benefits of cooperating:
 1. We updated the code so that whenever an organism cooperates, all its energy
 is taken away and 8 random organisms gain one energy. We predict that since
 Cooperators cooperate every time, they will always have 0 energy and never
@@ -229,3 +229,17 @@ replaced. Because the Defectors always accept energy so often, they
 reproduce the most often. However, this reproduction sets their energy to
 0, so they get replaced by their offspring, which also has 0 energy
 and is likely to be replaced.
+
+Location Sensitivity:
+We constructed a grid of 10 * 10 organisms and stored each type
+together. We throw an exception if the total number of organisms entered
+from the command line is not 100. We predict that the Mean Cooperation
+Probability will increase compared to previous experiments, because under
+this model, organisms can only interact with those around them, which means
+they interact mostly with the same type of organisms as themselves. That's
+why Cooperators will mostly give energy to other Cooperators, thus
+benefiting themselves. Similarly, when Defectors reproduce, they will
+likely have to replace another Defector.
+Our prediction is correct. The Mean Cooperation Probability averages around
+0.4, but can go over 0.5 at times.
+

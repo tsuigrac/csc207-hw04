@@ -4,7 +4,10 @@ import java.io.PrintWriter;
 
 public class ALifeSim {
   public static void main(String[] args) throws Exception {
-
+    if (Integer.valueOf(args[1]).intValue() + Integer.valueOf(args[2]).intValue()
+        + Integer.valueOf(args[3]).intValue() != 100) {
+      throw new Exception("The total number of organisms must equal to 100");
+    }
     int iteration = Integer.valueOf(args[0]);
 
     Pair<String, Integer>[] organisms = new Pair[3];
@@ -26,7 +29,6 @@ public class ALifeSim {
       pen.println(current.getLeft() + " = " + current.getRight());
     }
     pen.println("Mean Cooperation Probability" + " = " + pop.calculateCooperationMean());
-    
   }
 
 }
